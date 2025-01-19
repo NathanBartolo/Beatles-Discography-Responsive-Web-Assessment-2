@@ -40,71 +40,69 @@ body {
   height: 100vh;
   position: relative; /* To make sure overlay is positioned thats why i called relative to the banner */
 }
-/*position and overlay*/
-.banner::before {
+.banner::before {/*position and overlay*/
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0));/*Added a gradient on the bg for styling*/
-  z-index: 1; /* Overlay should be above video */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0));/*Added a gradient on the bg for styling of overlay*/
+  z-index: 1; /* The gradent overlay should be above the bg image*/
 }
-/* Image styling */
-.bg img {
+.bg img {/* Image styling */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* Ensure the image covers the full banner */
-  z-index: 0; /* Image should be behind the overlay */
+  -o-object-fit: cover;/*Ensure the the image will fit the whole bannner*/
+     object-fit: cover; 
+  z-index: 0; /* 0 index to push the image behind the overlay */
 }
-.center-content {
+.center-content {/*Style for the logo container*/
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%);/*Used translate to center the logo*/
   text-align: center;
   color: var(--primary-color);
-  z-index: 2; /* Ensure content is above overlay */
+  z-index: 2; /* Ensure content is above overlay and bg img*/
   margin-top: 100px;
-  overflow: hidden; /* Hide parts of the image initially */
+  overflow: hidden; /* Hide parts of the image initially for animation */
 }
-.center-content img {
+.center-content img {/*Styling for the image logo*/
   margin-bottom: 20px;
-  width: 100%; /* Ensure the PNG scales properly */
+  width: 100%; /* Ensure the png file scales properly */
   position: relative;
-  -webkit-clip-path: inset(0 100% 0 0);
-          clip-path: inset(0 100% 0 0); /* Hide the entire signature initially */
+  -webkit-clip-path: inset(0 100% 0 0);/*Clip the image to hide it*/
+          clip-path: inset(0 100% 0 0); /* Hide the entire logo initially */
   animation: typewrite 0.8s ease-in-out forwards;
 }
 @keyframes typewrite {
   to {
     -webkit-clip-path: inset(0 0 0 0);
-            clip-path: inset(0 0 0 0); /* Reveal the entire signature */
+            clip-path: inset(0 0 0 0); /* Reveal the entire logo img */
   }
 }
-.intro {
+.intro {/*Introduction text styling*/
   color: var(--primary-color);
   font-size: 1.5em;
   padding: 100px;
   text-align: center;
   font-weight: lighter;
 }
-.intro-mobile {
-  display: none;
+.intro-mobile {/*Created another style for mobile*/
+  display: none;/*Hide it initally for desktop*/
 }
-.cards {
-  display: flex;
+.cards {/*Style for band members card container*/
+  display: flex;/*Made it flex to align it horizontally*/
   gap: 10px;
   padding: 8px;
-  align-items: stretch;
+  align-items: stretch;/*Stretched the items to fit whole column*/
 }
-.card {
+.card {/*Styling for every card*/
   position: relative;
-  flex: 1;
+  flex: 1;/*Flex 1 for standard size of the card*/
   height: 75vh;
   background-color: white;
   border-radius: 4px;
@@ -112,15 +110,15 @@ body {
   overflow: hidden;
   transition: flex 0.4s ease-in-out;
 }
-.card img {
+.card img {/*Styling for the img of each band members*/
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
+  -o-object-fit: cover;/*Ensure the it fits the entire container*/
      object-fit: cover;
-  transition: opacity 0.4s ease;
-  transition: transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease;/*Used this for the hover animation */
+  transition: transform 0.4s ease-in-out;/*Used this to transform img when hover*/
 }
-.overlay {
+.overlay {/*Styling for the overlay name and introduction of band members when hove*/
   position: absolute;
   top: 0;
   left: 0;
@@ -128,104 +126,103 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: var(--primary-color);
-  opacity: 0;
+  opacity: 0;/*0 capacity to hide the content initally*/
   transition: opacity 0.3s ease-in-out; /* Smooth fade in effect */
-  display: flex;
-  flex-direction: column;
+  display: flex;/*Used display flex to align the content properly*/
+  flex-direction: column;/*Set it to column*/
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.card:hover .overlay {
+.card:hover .overlay {/*Set overlay capacity to 1 when hovering to display content*/
   opacity: 1;
 }
-.card:hover {
+.card:hover {/*flex the specific card larger to make a hover animation*/
   flex: 1.2;
 }
-.card:hover img {
-  opacity: 0.3;
-  transform: scale(1.1);
+.card:hover img {/*Hover styling for the image*/
+  opacity: 0.3;/*Set opacity lower to emphasize the overlay*/
+  transform: scale(1.1);/*Used transform scale to enlarge the scale of the image*/
 }
-.overlay h3 {
+.overlay h3 {/*H3 overlay styling*/
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-.overlay p {
+.overlay p { /*Paragraph overlay styling*/
   font-size: 1rem;
   line-height: 1.5;
 }
-.albums {
+.albums {/*Styling for album container*/
   color: var(--primary-color);
 }
-.album_title {
-  display: flex;
-  flex-direction: row;
+.album_title {/*Album title styling*/
+  display: flex;/*set it to flex to align items*/
+  flex-direction: row;/*set it to row to ahieve certain design*/
   gap: 50px;
   padding: 20px;
-  border-top: 0.2px solid rgb(134, 131, 131);
+  border-top: 0.2px solid rgb(134, 131, 131);/*added a top border for design*/
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.album_title h1 {
+.album_title h1 {/*title h1 styling*/
   font-weight: 100;
   margin-left: 300px;
   margin-right: 50px;
 }
-.album_title p {
+.album_title p {/*album title paragraph styling*/
   font-style: italic;
   font-size: small;
 }
-.item {
-  display: grid;
-  grid-template-columns: 0.2fr 2fr;
+.item {/*album item styling*/
+  display: grid;/*set it to grid to achieve certain style*/
+  grid-template-columns: 0.2fr 2fr;/*the first column is for the album cover and the 2nd one is for album name and year*/
   padding: 12px;
-  border-bottom: 0.2px solid rgb(134, 131, 131);
+  border-bottom: 0.2px solid rgb(134, 131, 131);/*added a bottom border for styling*/
   background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;/*added a backround color transition for hover animation*/
   position: relative;
   cursor: pointer;
 }
-.item:hover {
-  background-color: rgba(255, 255, 255, 0.945);
-  color: black;
+.item:hover {/*item hover styling*/
+  background-color: rgba(255, 255, 255, 0.945);/*change the color to white when hovering*/
+  color: black;/*text color to black*/
 }
-.item img {
+.item img {/*album cover styling*/
   width: 120px;
   height: 120px;
-  -o-object-fit: cover;
+  -o-object-fit: cover;/*ensure to fit the container*/
      object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;/*added transition transform for hover animation*/
 }
-.description {
+.description {/*album description styling*/
   padding-left: 20px;
-  transform: translateY(-10px);
-  transition: transform 0.5s ease-in;
+  transform: translateY(-10px);/*slightly adjust the position*/
+  transition: transform 0.5s ease-in;/*added transition transform for hover animation*/
 }
-.item:hover .description {
-  transform: translateY(0);
+.item:hover .description {/*description hover animation*/
+  transform: translateY(0);/*align it to center when hover*/
 }
-.description h1 {
+.description h1 {/*description h1 styling*/
   font-weight: bolder;
   font-size: 5em;
 }
-.description p {
+.description p {/*desciption paragraph styling*/
   transition: color 0.3s ease;
 }
-.item:hover .description h1,
+.item:hover .description h1,/*change the text color when hovering*/
 .item:hover .description p {
   color: black;
 }
-.item:hover img {
+.item:hover img {/*make the album cover larger when hovering*/
   transform: scale(1.05);
 }
-/* Dropdown description styles */
-.album-dropdown {
-  display: none;
+.album-dropdown {/*dropdown description styling*/
+  display: none;/*hide the dropdown initally*/
   padding-top: 10px;
   padding-left: 20px;
-  grid-column: 2;
+  grid-column: 2;/*place it on the same column with the album title*/
 }
-.album-dropdown p,
+.album-dropdown p,/*dropdown paragraph styling*/
 .album-dropdown ul {
   margin-top: 50px;
   font-weight: bold;
@@ -234,72 +231,72 @@ body {
   letter-spacing: 2px;
 }
 .album-dropdown ul {
-  list-style-type: none;
+  list-style-type: none;/*remove bullet list point*/
   padding-left: 0;
 }
 .album-dropdown li {
   margin: 5px 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black;/*added top border for stylin*/
 }
-.album_description {
+.album_description {/*description styling*/
   font-size: 1.5em;
   font-weight: 300;
 }
-.compilations {
+.compilations {/*Styling for the compilation section*/
   color: var(--primary-color);
-  display: grid;
+  display: grid;/*display grid to create a 4 column*/
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   margin-left: 100px;
   margin-top: 50px;
 }
-.comp_title {
-  display: flex;
+.comp_title {/*title styling*/
+  display: flex;/*flex it for specific styling*/
   flex-direction: row;
   gap: 50px;
   padding: 20px;
-  border-top: 0.2px solid rgb(134, 131, 131);
+  border-top: 0.2px solid rgb(134, 131, 131);/*added top boder for specific styling*/
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.comp_title h1 {
+.comp_title h1 {/*title h1 styling*/
   font-weight: 100;
   margin-left: 300px;
   margin-right: 50px;
   font-size: x-large;
 }
-.comp_title p {
+.comp_title p {/*title paragraph styling*/
   font-style: italic;
   font-size: small;
 }
-.comp img {
+.comp img {/*album cover styling for compilations*/
   max-height: 100%;
   max-width: 200px;
   margin-bottom: 1em;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;/*added transition for hover animation*/
 }
 .comp {
   margin-bottom: 50px;
 }
 .comp h1,
 .comp p {
-  opacity: 0; /* Hidden by default */
+  opacity: 0; /* Hidden by default for hover animation*/
   transition: opacity 0.3s ease; /* Smooth fade-in effect */
   pointer-events: none; /* Prevent interaction with hidden text */
 }
 .comp:hover img {
-  transform: scale(1.1); /* Zoom in the image slightly */
+  transform: scale(1.1); /* enlarge the image slightly when hoevered */
 }
 .comp:hover h1,
 .comp:hover p {
-  opacity: 1; /* Show the text */
+  opacity: 1; /* Show the text when hovered*/
 }
-.wrapper {
-  min-height: 100vh;
+.wrapper {/*new song section styling*/
+  min-height: 100vh;/*set min height*/
   background-color: #000000;
-  overflow: hidden;
+  overflow: hidden;/*hide oveflow content to avoid horizontal scrolling*/
 }
-.container {
+.container {/*new albume conatiner styling*/
   width: 100%;
   max-width: 250px;
   perspective: 900px;
@@ -307,53 +304,53 @@ body {
 }
 .NAT {
   transition: 0.5s all ease;
-  transform: rotateX("50deg") scale(0.8);
+  transform: rotateX("50deg") scale(0.8);/*rotate the disk*/
 }
 .NAT::after {
   content: "";
   display: block;
   background-color: black;
-  background-image: url("Assets/Now_and_Then.png");
+  background-image: url("Assets/Now_and_Then.png");/*added album cover*/
   background-size: contain;
   padding-bottom: 100%;
 }
-.NAT:hover {
+.NAT:hover {/*rotate the disk when hovered*/
   transform: rotate(0deg) scale(1) translateY(10px);
   transition: 0.7 all ease;
 }
-.disc {
+.disc {/*disc styling*/
   width: 100%;
   position: absolute;
-  z-index: -1;
+  z-index: -1;/*hide the disk under the album cover*/
   left: 0;
   transition: 0.5s ease-in-out;
   animation: spin 4s linear infinite;
 }
 .NAT:hover .disc {
   transition: 0.7s ease-in-out 0.3s;
-  left: 55%;
+  left: 55%;/*move the disk out when hovered*/
 }
 @keyframes spin {
   100% {
     transform: rotate(360deg);
   }
 }
-.timeline {
+.timeline {/*timline styling*/
   color: var(--primary-color);
   text-align: center;
   letter-spacing: 2px;
   margin: 5em auto;
   max-width: 34.15em;
 }
-.timeline h1 {
+.timeline h1 {/*h1 styling*/
   margin-bottom: 2em;
 }
-.checkpoint {
+.checkpoint {/*Checkpoint styling*/
   max-width: 34em;
   padding-top: 2em;
   padding-bottom: 2em;
 }
-.checkpoint div {
+.checkpoint div {/*checkpoint div styling*/
   border: 2px solid #888;
   padding: 1.8em;
 }
@@ -361,12 +358,12 @@ body {
   line-height: 27px;
   color: #ccc;
 }
-.checkpoint:nth-child(odd) {
+.checkpoint:nth-child(odd) {/*styling for all the odd checkpoin*/
   border-left: 3px solid #888;
   padding-left: 3em;
   transform: translateX(17em);
 }
-.checkpoint:nth-child(even) {
+.checkpoint:nth-child(even) {/*same style but adjusted the direction*/
   border-right: 3px solid #888;
   padding-right: 3em;
   transform: translateX(-17em);
@@ -408,7 +405,7 @@ footer {
 .footerlogo {
   margin-right: 180px;
 }
-.footerlogo img {
+.footerlogo img {/*footer img styling for desktop*/
   max-width: 100%;
   height: 120px;
   margin-left: 20px;
@@ -463,7 +460,7 @@ footer {
   color: #ccc;
   margin: 0 auto; /* Align to the middle */
 }
-@media (min-width: 350px) and (max-width: 540px) {
+@media (min-width: 350px) and (max-width: 540px) {/*Mobile styling*/
   html, body {
     overflow-x: hidden; /* Prevent horizontal overflow */
     width: 100%; /* Ensure no horizontal overflow */
@@ -500,7 +497,7 @@ footer {
             clip-path: none; /* Remove clipping effect */
     animation: none; /* Remove animation */
   }
-  .intro {
+  .intro {/*Adjusted for mobile*/
     display: none;
   }
   .intro-mobile {
@@ -521,7 +518,7 @@ footer {
     font-size: small;
   }
   .cards {
-    display: grid;
+    display: grid;/*adjust the card to just one per column*/
     gap: 10px;
     padding: 20px;
   }
@@ -593,7 +590,7 @@ footer {
   }
   .compilations {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);/*made the column 2x2*/
     margin: 0 auto; /* Center the grid container horizontally */
     margin-top: 10px;
     max-width: 100%; /* Prevent grid from stretching beyond the container */
@@ -658,7 +655,7 @@ footer {
   .NAT:hover .disc {
     left: 40%; /* Adjust disc position on hover for mobile */
   }
-  .timeline {
+  .timeline {/*adjusted timeline mobile styling*/
     width: 80vw;
   }
   .timeline .checkpoint {
@@ -728,7 +725,7 @@ footer {
     font-size: 12px;
   }
 }
-@media (min-width: 720px) and (max-width: 1023px) {
+@media (min-width: 720px) and (max-width: 1023px) {/*Tablet styling*/
   .banner {
     height: 70vh; /* Reduced height to make it more appropriate for tablet screens */
   }
