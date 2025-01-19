@@ -122,12 +122,12 @@ fetch('/api/albums')
       compDescription.textContent = compilation.description;
       compDiv.appendChild(compDescription);
 
-      // Add hover event listeners
+      // Added hover event listeners
       compDiv.addEventListener('mouseenter', () => {
         audioPlayer.src = compilation.songPreview;
         audioPlayer.play();
       });
-
+      //When mouse leaves it will paus the music
       compDiv.addEventListener('mouseleave', () => {
         audioPlayer.pause();
         audioPlayer.currentTime = 0; // Reset to the beginning
