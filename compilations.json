@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "title": "1962 - 1966",
+      "year": 1973,
+      "description": "A compilation of The Beatles' early hits from 1962 to 1966.",
+      "image": "Assets/comp albums/1962 album cover.jpg",
+      "songPreview": "Assets/music/Love Me Do (Remastered 2009)-[AudioTrimmer.com].mp3"
+    },
+    {
+      "id": 2,
+      "title": "1967 - 1970",
+      "year": 1973,
+      "description": "A compilation of The Beatles' later hits from 1967 to 1970.",
+      "image": "Assets/comp albums/19671970 album cover.jpg",
+      "songPreview": "Assets/music/The Beatles - Don't Let Me Down.mp3"
+    },
+    {
+      "id": 3,
+      "title": "PAST MASTERS",
+      "year": 1988,
+      "description": "A collection of non-album singles, B-sides, and rarities.",
+      "image": "Assets/comp albums/past-masters-the-beatles-630451.jpg",
+      "songPreview": "Assets/music/Hey Jude.mp3"
+    },
+    {
+      "id": 4,
+      "title": "ANTHOLOGY 1",
+      "year": 1995,
+      "description": "The first of three anthology albums, featuring early recordings and live performances.",
+      "image": "Assets/comp albums/Anthology1cover.jpg",
+      "songPreview": "Assets/music/I Saw Her Standing There (2023 Mix).mp3"
+    },
+    {
+      "id": 5,
+      "title": "ANTHOLOGY 2",
+      "year": 1996,
+      "description": "The second anthology album, including tracks from 1965 to 1967.",
+      "image": "Assets/comp albums/Anthology2cover.jpg",
+      "songPreview": "Assets/music/Ticket To Ride (Remastered 2015).mp3"
+    },
+    {
+      "id": 6,
+      "title": "ANTHOLOGY 3",
+      "year": 1996,
+      "description": "The third anthology album, featuring later recordings from 1968 to 1970.",
+      "image": "Assets/comp albums/Anthology3cover.jpg",
+      "songPreview": "Assets/music/Maxwell's Silver Hammer (Remastered 2009).mp3"
+    },
+    {
+      "id": 7,
+      "title": "1",
+      "year": 2000,
+      "description": "A compilation of The Beatles' number-one hits.",
+      "image": "Assets/comp albums/The_Beatles_1_album_cover.jpg",
+      "songPreview": "Assets/music/Help! (Remastered 2015).mp3"
+    },
+    {
+      "id": 8,
+      "title": "LOVE",
+      "year": 2006,
+      "description": "A lesser-known compilation celebrating unique themes.",
+      "image": "Assets/comp albums/Love_(The_Beatles_album).jpg",
+      "songPreview": "Assets/music/Revolution.mp3"
+    }
+  ]
+  

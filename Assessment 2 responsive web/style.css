@@ -1,0 +1,840 @@
+:root {/*Created a variant for standard styling*/
+  --primary-color: #ccc;
+  --background-color: black;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --accent-color: #888;
+  --font-primary: "Neutraface", sans-serif;
+  
+}
+@font-face {/*Called fontface to import a woff type of font*/
+  font-family: "Neutraface";
+  src: url("/fonts/Neutraface Text Book.woff") format("woff2"), url("/fonts/Neutraface Text Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {/*Standard layout for the whole html and body*/
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;/*Ensure that there will no horizontal scrolling*/
+}
+* {/*Ensure that all of the content fits*/
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {/*styling for all the headers */
+  font-family: --font-primary;
+  color: var(--primary-color);
+}
+p {/*styling for paragraphs*/
+  font-family: --font-primary;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+body {
+  background-color: var(--background-color);
+}
+.banner {/*this is the main bg of the whole header*/
+  width: 100%;
+  height: 100vh;
+  position: relative; /* To make sure overlay is positioned thats why i called relative to the banner */
+}
+/*position and overlay*/
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
+  z-index: 1; /* Overlay should be above video */
+}
+/* Image styling */
+.bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensure the image covers the full banner */
+  z-index: 0; /* Image should be behind the overlay */
+}
+.center-content {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  color: var(--primary-color);
+  z-index: 2; /* Ensure content is above overlay */
+  margin-top: 100px;
+  overflow: hidden; /* Hide parts of the image initially */
+}
+.center-content img {
+  margin-bottom: 20px;
+  width: 100%; /* Ensure the PNG scales properly */
+  position: relative;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0); /* Hide the entire signature initially */
+  animation: typewrite 0.8s ease-in-out forwards;
+}
+@keyframes typewrite {
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0); /* Reveal the entire signature */
+  }
+}
+.intro {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  padding: 100px;
+  text-align: center;
+  font-weight: lighter;
+}
+.intro-mobile {
+  display: none;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  align-items: stretch;
+}
+.card {
+  position: relative;
+  flex: 1;
+  height: 75vh;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: flex 0.4s ease-in-out;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.4s ease;
+  transition: transform 0.4s ease-in-out;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade in effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover {
+  flex: 1.2;
+}
+.card:hover img {
+  opacity: 0.3;
+  transform: scale(1.1);
+}
+.overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.albums {
+  color: var(--primary-color);
+}
+.album_title {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 20px;
+  border-top: 0.2px solid rgb(134, 131, 131);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.album_title h1 {
+  font-weight: 100;
+  margin-left: 300px;
+  margin-right: 50px;
+}
+.album_title p {
+  font-style: italic;
+  font-size: small;
+}
+.item {
+  display: grid;
+  grid-template-columns: 0.2fr 2fr;
+  padding: 12px;
+  border-bottom: 0.2px solid rgb(134, 131, 131);
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.945);
+  color: black;
+}
+.item img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.description {
+  padding-left: 20px;
+  transform: translateY(-10px);
+  transition: transform 0.5s ease-in;
+}
+.item:hover .description {
+  transform: translateY(0);
+}
+.description h1 {
+  font-weight: bolder;
+  font-size: 5em;
+}
+.description p {
+  transition: color 0.3s ease;
+}
+.item:hover .description h1,
+.item:hover .description p {
+  color: black;
+}
+.item:hover img {
+  transform: scale(1.05);
+}
+/* Dropdown description styles */
+.album-dropdown {
+  display: none;
+  padding-top: 10px;
+  padding-left: 20px;
+  grid-column: 2;
+}
+.album-dropdown p,
+.album-dropdown ul {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 2em;
+  letter-spacing: 2px;
+}
+.album-dropdown ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.album-dropdown li {
+  margin: 5px 0;
+  border-bottom: 1px solid black;
+}
+.album_description {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.compilations {
+  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.comp_title {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 20px;
+  border-top: 0.2px solid rgb(134, 131, 131);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.comp_title h1 {
+  font-weight: 100;
+  margin-left: 300px;
+  margin-right: 50px;
+  font-size: x-large;
+}
+.comp_title p {
+  font-style: italic;
+  font-size: small;
+}
+.comp img {
+  max-height: 100%;
+  max-width: 200px;
+  margin-bottom: 1em;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.comp {
+  margin-bottom: 50px;
+}
+.comp h1,
+.comp p {
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  pointer-events: none; /* Prevent interaction with hidden text */
+}
+.comp:hover img {
+  transform: scale(1.1); /* Zoom in the image slightly */
+}
+.comp:hover h1,
+.comp:hover p {
+  opacity: 1; /* Show the text */
+}
+.wrapper {
+  min-height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 250px;
+  perspective: 900px;
+  margin: auto;
+}
+.NAT {
+  transition: 0.5s all ease;
+  transform: rotateX("50deg") scale(0.8);
+}
+.NAT::after {
+  content: "";
+  display: block;
+  background-color: black;
+  background-image: url("Assets/Now_and_Then.png");
+  background-size: contain;
+  padding-bottom: 100%;
+}
+.NAT:hover {
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: 0.7 all ease;
+}
+.disc {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  animation: spin 4s linear infinite;
+}
+.NAT:hover .disc {
+  transition: 0.7s ease-in-out 0.3s;
+  left: 55%;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.timeline {
+  color: var(--primary-color);
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 5em auto;
+  max-width: 34.15em;
+}
+.timeline h1 {
+  margin-bottom: 2em;
+}
+.checkpoint {
+  max-width: 34em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.checkpoint div {
+  border: 2px solid #888;
+  padding: 1.8em;
+}
+.checkpoint p {
+  line-height: 27px;
+  color: #ccc;
+}
+.checkpoint:nth-child(odd) {
+  border-left: 3px solid #888;
+  padding-left: 3em;
+  transform: translateX(17em);
+}
+.checkpoint:nth-child(even) {
+  border-right: 3px solid #888;
+  padding-right: 3em;
+  transform: translateX(-17em);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+  content: "";
+  background: #888;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd)::before {
+  left: 0;
+}
+.checkpoint:nth-child(even)::before {
+  right: 0;
+}
+/* Footer styles */
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding-top: 12px;
+  text-align: left; /* Align text to the left */
+  border-top: 1px solid #666;
+  letter-spacing: 2px;
+}
+.footer-content {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  max-width: 1200px;
+  padding-right: 0 20px; /* Added padding to the sides */
+  padding-bottom: 100px;
+  font-size: 12px;
+}
+.footerlogo {
+  margin-right: 180px;
+}
+.footerlogo img {
+  max-width: 100%;
+  height: 120px;
+  margin-left: 20px;
+}
+.footer-links,
+.footer-brands,
+.social-icons,
+.created {
+  text-align: left;
+}
+.footer-links ul,
+.footer-brands ul,
+.social-icons ul,
+.created ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li a,
+.footer-brands ul li a,
+.social-icons ul li a,
+.created ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links ul li a:hover,
+.footer-brands ul li a:hover,
+.social-icons ul li a:hover,
+.created ul li a:hover {
+  color: #ffffff;
+}
+/* Footer bottom styles */
+.footer-bottom {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #666; /* Add a border on top */
+  padding-top: 20px; /* Add padding on top */
+}
+.back-to-top a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-to-top a:hover {
+  color: #ffffff;
+}
+.copyright-info {
+  color: #ccc;
+  margin: 0 auto; /* Align to the middle */
+}
+@media (min-width: 350px) and (max-width: 540px) {
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure no horizontal overflow */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .banner {
+    position: relative; /* Ensure overlay and intro are positioned relative to the banner */
+    height: 100vh; /* Full height of the viewport */
+  }
+  /* Background image */
+  .bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 0; /* Background image behind everything */
+  }
+  /* Center content (logo or signature) */
+  .center-content {
+    top: 30%;
+    transform: translate(-50%, -50%); /* Center content */
+    z-index: 2; /* Ensure content is above the overlay */
+    width: 80%;
+  }
+  /* Center content image */
+  .center-content img {
+    width: 100%; /* Scale logo down for mobile */
+    -webkit-clip-path: none;
+            clip-path: none; /* Remove clipping effect */
+    animation: none; /* Remove animation */
+  }
+  .intro {
+    display: none;
+  }
+  .intro-mobile {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .intro-mobile h1 {
+    margin-left: 2px;
+    margin-right: 30px;
+    font-size: medium;
+    font-weight: 300;
+  }
+  .intro-mobile p {
+    font-style: italic;
+    font-size: small;
+  }
+  .cards {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+  }
+  .card {
+    height: 75vh;
+    background-color: white;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .overlay p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .album_title {
+    display: grid;
+    gap: 20px;
+    padding-top: 10px;
+    border-top: 0.2px solid rgb(134, 131, 131);
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .album_title h1 {
+    margin-left: 2px;
+    margin-right: 30px;
+    font-size: medium;
+    font-weight: 300;
+  }
+  .album_title p {
+    font-style: italic;
+    font-size: small;
+  }
+  .item {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr;
+    padding: 12px;
+  }
+  .item img {
+    width: 60px;
+    height: 60px;
+  }
+  .description {
+    padding-left: 20px;
+    transform: translateY(-10px);
+  }
+  .description h1 {
+    font-weight: bolder;
+    font-size: 1.7em;
+  }
+  .album-dropdown p,
+  .album-dropdown ul {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 2em;
+    letter-spacing: 2px;
+  }
+  .album-dropdown li {
+    border-bottom: 1px solid black;
+  }
+  .album_description {
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .compilations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto; /* Center the grid container horizontally */
+    margin-top: 10px;
+    max-width: 100%; /* Prevent grid from stretching beyond the container */
+    width: 83%; /* Adjust the width if needed to keep it centered */
+    gap: 10px;
+  }
+  .comp_title {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .comp_title h1 {
+    margin-left: 2px;
+    margin-right: 30px;
+    font-size: medium;
+    font-weight: 300;
+  }
+  .comp_title p {
+    font-style: italic;
+    font-size: small;
+  }
+  .comp img {
+    max-height: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  .comp {
+    margin-bottom: 50px;
+  }
+  .comp h1 {
+    font-size: small;
+    margin-bottom: 5px;
+  }
+  .comp p {
+    font-size: 8px;
+  }
+  .wrapper {
+    min-height: 50vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  .container {
+    max-width: 200px; /* Reduce max-width of container */
+  }
+  .NAT {
+    transform: rotateX(50deg) scale(0.6); /* Smaller scaling for mobile */
+  }
+  .NAT::after {
+    background-size: contain;
+    padding-bottom: 120%; /* Adjust padding to fit better */
+  }
+  .NAT:hover {
+    transform: rotate(0deg) scale(0.8) translateY(10px); /* Adjust scale on hover */
+    transition: 0.7s all ease;
+  }
+  .disc {
+    width: 100%; /* Adjust disc size */
+    position: absolute;
+    left: 10%; /* Adjust left position */
+  }
+  .NAT:hover .disc {
+    left: 40%; /* Adjust disc position on hover for mobile */
+  }
+  .timeline {
+    width: 80vw;
+  }
+  .timeline .checkpoint {
+    width: 100%;
+    transform: none;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+  .timeline .checkpoint::before {
+    width: 3px;
+    height: 4em;
+    top: -2em;
+    left: 50%;
+  }
+  .timeline .checkpoint div::before {
+    top: -0.5em;
+    left: 50%;
+  }
+  /* Footer styles */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    font-size: 10px;
+  }
+  .footerlogo {
+    margin-right: 0;
+    text-align: center;
+  }
+  .footerlogo img {
+    height: 100px; /* Adjust height of the logo */
+  }
+  /* Adjust footer links */
+  .footer-links,
+  .footer-brands,
+  .social-icons,
+  .created {
+    text-align: center;
+  }
+  /* Adjust spacing of footer links */
+  .footer-links ul,
+  .footer-brands ul,
+  .social-icons ul,
+  .created ul {
+    margin-bottom: 2px;
+  }
+  /* Adjust font size of footer links */
+  .footer-links ul li a,
+  .footer-brands ul li a,
+  .social-icons ul li a,
+  .created ul li a {
+    font-size: 14px; /* Increase font size slightly for readability */
+    line-height: 25px;
+  }
+  /* Footer bottom styles */
+  .footer-bottom {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-top: 20px; /* Add padding on top */
+  }
+  .footer-bottom .back-to-top a {
+    font-size: 14px; /* Adjust back-to-top link size */
+    margin-bottom: 10px; /* Space between links */
+  }
+  .footer-bottom .copyright-info {
+    font-size: 12px;
+  }
+}
+@media (min-width: 720px) and (max-width: 1023px) {
+  .banner {
+    height: 70vh; /* Reduced height to make it more appropriate for tablet screens */
+  }
+  /* Center content adjustments */
+  .center-content {
+    margin-top: 80px; /* Adjusted margin for proper vertical alignment */
+  }
+  /* Optional: Adjust text size for the center content */
+  .center-content h1 {
+    font-size: 2.5rem; /* Adjust the font size for smaller screens */
+  }
+  .center-content p {
+    font-size: 1.2rem; /* Adjust paragraph font size */
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout */
+    gap: 10px; /* Maintain some spacing between cards */
+  }
+  .card {
+    height: 300px; /* Adjust the height to fit the tablet viewport */
+  }
+  .description h1 {
+    font-weight: bolder;
+    font-size: 2em;
+  }
+  .item img {
+    width: 80px;
+    height: 80px;
+  }
+  .compilations {
+    margin-left: 80px;
+  }
+  .comp img {
+    max-height: 100%;
+    max-width: 110px;
+    margin-bottom: 20px;
+  }
+  .comp h1 {
+    font-size: smaller;
+    margin-bottom: 5px;
+  }
+  .comp p {
+    font-size: 8px;
+  }
+  .wrapper {
+    min-height: 50vh;
+  }
+  .timeline {
+    letter-spacing: 2px;
+    margin: 3em auto; /* Reduced margin for better fit on tablet */
+    max-width: 30em; /* Adjusted max-width to fit the tablet viewport */
+    padding: 0 1em; /* Added horizontal padding to create space from the edges */
+  }
+  .timeline h1 {
+    margin-bottom: 1.5em; /* Adjusted margin for tablet */
+  }
+  .checkpoint {
+    max-width: 30em; /* Adjusted max-width to fit the tablet viewport */
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .checkpoint div {
+    border: 2px solid #888;
+    padding: 1.8em;
+  }
+  .checkpoint p {
+    line-height: 27px;
+  }
+  /* Adjust padding and transforms for checkpoints */
+  .checkpoint:nth-child(odd) {
+    padding-left: 2.5em;
+    transform: translateX(5em); /* Slightly reduced to fit tablet */
+  }
+  .checkpoint:nth-child(even) {
+    padding-right: 2.5em;
+    transform: translateX(-5em); /* Slightly reduced to fit tablet */
+  }
+  .checkpoint:nth-child(odd)::before,
+  .checkpoint:nth-child(even)::before {
+    background: #888;
+    width: 2.5em; /* Slightly smaller dots for tablet */
+    height: 3px;
+    top: 50%;
+  }
+  .footer-content {
+    display: flex;
+    gap: 80px;
+    max-width: 1200px;
+    padding-right: 0 20px; /* Added padding to the sides */
+    padding-bottom: 50px;
+    padding-top: 10px;
+    font-size: 10px;
+  }
+  .footerlogo {
+    margin-right: 10px;
+  }
+  .footerlogo img {
+    max-width: 100%;
+    height: 80px;
+    margin-left: 20px;
+  }
+  /* Footer bottom styles */
+  .footer-bottom {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding-top: 20px; /* Add padding on top */
+  }
+}

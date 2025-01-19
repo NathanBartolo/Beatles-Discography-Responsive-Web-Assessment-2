@@ -1,0 +1,347 @@
+[
+    {
+      "id": 1,
+      "title": "PLEASE PLEASE ME",
+      "year": 1963,
+      "description": "This is the debut album by The Beatles. It features iconic tracks like 'I Saw Her Standing There' and 'Love Me Do.' The album is a mix of rock and roll, pop, and rhythm and blues influences, helping to launch their career.",
+      "songs": [
+        { "title": "I Saw Her Standing There", "duration": "2:55" },
+        { "title": "Love Me Do", "duration": "2:22" },
+        { "title": "P.S. I Love You", "duration": "2:06" },
+        { "title": "Baby It's You", "duration": "2:35" },
+        { "title": "Do You Want To Know A Secret", "duration": "1:58" },
+        { "title": "A Taste Of Honey", "duration": "2:04" },
+        { "title": "There's A Place", "duration": "1:50" },
+        { "title": "Twist And Shout", "duration": "2:33" }
+      ],
+      "image": "Assets/Please_Please_Me album cover.png",
+      "songPreview": "Assets/music/I Saw Her Standing There (2023 Mix).mp3"
+    },
+    {
+      "id": 2,
+      "title": "WITH THE BEATLES",
+      "year": 1963,
+      "description": "The Beatles' second album continues to build on their success, with a mix of rock, pop, and rhythm and blues. The album includes original compositions and covers, showcasing their growing songwriting abilities.",
+      "songs": [
+        
+            { "title": "It Won't Be Long", "duration": "2:10" },
+            { "title": "All I've Got to Do", "duration": "2:05" },
+            { "title": "All My Loving", "duration": "2:02" },
+            { "title": "Don't Bother Me", "duration": "2:29" },
+            { "title": "Little Child", "duration": "1:47" },
+            { "title": "Till There Was You", "duration": "2:12" },
+            { "title": "Please Mister Postman", "duration": "2:33" },
+            { "title": "Roll Over Beethoven", "duration": "2:45" },
+            { "title": "Hold Me Tight", "duration": "2:31" },
+            { "title": "You Really Got a Hold on Me", "duration": "3:04" },
+            { "title": "I Wanna Be Your Man", "duration": "1:59" },
+            { "title": "Devil in Her Heart", "duration": "2:27" },
+            { "title": "Not a Second Time", "duration": "2:05" }
+        
+        
+      ],
+      "image": "Assets/With_The_Beatles album cover.png",
+      "songPreview": "Assets/music/All My Loving (Remastered 2009).mp3"
+
+    },
+    {
+      "id": 3,
+      "title": "A HARD DAY'S NIGHT",
+      "year": 1964,
+      "description": "The Beatles' third album, coinciding with their first film, is filled with upbeat rock and pop tracks. The album includes all original songs, including the iconic 'Can't Buy Me Love' and 'A Hard Day's Night.'",
+      "songs": [
+        
+            { "title": "A Hard Day's Night", "duration": "2:35" },
+            { "title": "I Should Have Known Better", "duration": "2:43" },
+            { "title": "If I Fell", "duration": "2:18" },
+            { "title": "I'm Happy Just to Dance with You", "duration": "1:56" },
+            { "title": "And I Love Her", "duration": "2:30" },
+            { "title": "Tell Me Why", "duration": "2:10" },
+            { "title": "Can't Buy Me Love", "duration": "2:12" },
+            { "title": "Nothin' Shakin' (But the Leaves on the Trees)", "duration": "2:35" },
+            { "title": "I Wanna Be Your Man", "duration": "1:59" },
+            { "title": "A Hard Day's Night", "duration": "2:18" },
+            { "title": "You Can't Do That", "duration": "2:35" },
+            { "title": "I'll Be Back", "duration": "2:14" }
+        
+        
+      ],
+      "image": "Assets/HardDayUK album cover.jpg",
+      "songPreview": "Assets/music/A Hard Day's Night (Remastered 2015).mp3"
+    },
+    {
+      "id": 4,
+      "title": "BEATLES FOR SALE",
+      "year": 1964,
+      "description": "A slightly more introspective album, Beatles for Sale reflects the band's grueling touring schedule. It features a mix of folk rock and traditional pop with some darker themes in tracks like 'I'm a Loser' and 'No Reply.'",
+      "songs": [
+        
+            { "title": "No Reply", "duration": "2:12" },
+            { "title": "I'm a Loser", "duration": "2:29" },
+            { "title": "Baby's in Black", "duration": "2:02" },
+            { "title": "Rock and Roll Music", "duration": "2:30" },
+            { "title": "I'll Follow the Sun", "duration": "1:49" },
+            { "title": "Mr. Moonlight", "duration": "2:37" },
+            { "title": "Kansas City/Hey-Hey-Hey-Hey!", "duration": "2:33" },
+            { "title": "Eight Days a Week", "duration": "2:43" },
+            { "title": "Words of Love", "duration": "2:06" },
+            { "title": "Honey Don't", "duration": "2:52" },
+            { "title": "Every Little Thing", "duration": "2:03" },
+            { "title": "I Don't Want to Spoil the Party", "duration": "2:33" }
+        
+        
+      ],
+      "image": "Assets/Beatlesforsale album cover.jpg",
+      "songPreview": "Assets/music/The Beatles - Eight Days A Week.mp3"
+    },
+    {
+      "id": 5,
+      "title": "HELP!",
+      "year": 1965,
+      "description": "Released alongside their second film, Help! features a mix of folk rock and pop. It showcases the band's growing experimentation with different musical styles and includes classic tracks like 'Help!' and 'Ticket to Ride.'",
+      "songs": [
+        
+            { "title": "Help!", "duration": "2:18" },
+            { "title": "The Night Before", "duration": "2:35" },
+            { "title": "You've Got to Hide Your Love Away", "duration": "2:10" },
+            { "title": "I Need You", "duration": "2:31" },
+            { "title": "Another Girl", "duration": "2:05" },
+            { "title": "You're Going to Lose That Girl", "duration": "2:19" },
+            { "title": "Ticket to Ride", "duration": "3:05" },
+            { "title": "Act Naturally", "duration": "2:30" },
+            { "title": "It's Only Love", "duration": "1:56" },
+            { "title": "You Like Me Too Much", "duration": "2:35" },
+            { "title": "Tell Me What You See", "duration": "2:36" },
+            { "title": "I've Just Seen a Face", "duration": "2:05" },
+            { "title": "Yesterday", "duration": "2:03" }
+        
+        
+      ],
+      "image": "Assets/The_Beatles_-_Help! album cover.png",
+      "songPreview": "Assets/music/Yesterday (Remastered 2009).mp3"
+    },
+    {
+      "id": 6,
+      "title": "RUBBER SOUL",
+      "year": 1965,
+      "description": "Rubber Soul is a breakthrough album for The Beatles, featuring more introspective lyrics and expanded musical arrangements. With tracks like 'Norwegian Wood' and 'In My Life,' it explores deeper themes and different genres.",
+      "songs": [
+        
+            { "title": "Drive My Car", "duration": "2:30" },
+            { "title": "Norwegian Wood (This Bird Has Flown)", "duration": "2:05" },
+            { "title": "You Won't See Me", "duration": "3:22" },
+            { "title": "Nowhere Man", "duration": "2:45" },
+            { "title": "Think for Yourself", "duration": "2:18" },
+            { "title": "The Word", "duration": "2:43" },
+            { "title": "Michelle", "duration": "2:40" },
+            { "title": "What Goes On", "duration": "2:45" },
+            { "title": "Girl", "duration": "2:30" },
+            { "title": "I'm Looking Through You", "duration": "2:23" },
+            { "title": "In My Life", "duration": "2:26" },
+            { "title": "Wait", "duration": "2:13" },
+            { "title": "If I Needed Someone", "duration": "2:22" },
+            { "title": "Run for Your Life", "duration": "2:18" }
+        
+        
+      ],
+      "image": "Assets/Rubber_Soul album cover.png",
+      "songPreview": "Assets/music/Michelle (Remastered 2009).mp3"
+    },
+    {
+      "id": 7,
+      "title": "REVOLVER",
+      "year": 1966,
+      "description": "Revolver is an album that pushes the boundaries of popular music. With tracks like 'Eleanor Rigby' and 'Tomorrow Never Knows,' The Beatles experimented with new sounds and studio techniques, showcasing their growth as artists.",
+      "songs": [
+        
+            { "title": "Taxman", "duration": "2:39" },
+            { "title": "Eleanor Rigby", "duration": "2:05" },
+            { "title": "I'm Only Sleeping", "duration": "3:00" },
+            { "title": "Love You To", "duration": "2:41" },
+            { "title": "Here, There and Everywhere", "duration": "2:24" },
+            { "title": "Yellow Submarine", "duration": "2:40" },
+            { "title": "She Said She Said", "duration": "2:37" },
+            { "title": "Good Day Sunshine", "duration": "2:08" },
+            { "title": "And Your Bird Can Sing", "duration": "2:02" },
+            { "title": "For No One", "duration": "1:59" },
+            { "title": "Doctor Robert", "duration": "2:14" },
+            { "title": "I Want to Tell You", "duration": "2:30" },
+            { "title": "Got to Get You into My Life", "duration": "2:29" },
+            { "title": "Tomorrow Never Knows", "duration": "2:57" }
+        
+        
+      ],
+      "image": "Assets/Revolver_(album_cover).jpg",
+      "songPreview": "Assets/music/Here, There And Everywhere (2022 Mix).mp3"
+    },
+    {
+      "id": 8,
+      "title": "SGT. PEPPER'S LONELY HEARTS CLUB BAND",
+      "year": 1967,
+      "description": "Often regarded as one of the greatest albums of all time, Sgt. Pepper's blends rock, pop, and psychedelic sounds in innovative ways. Iconic tracks like 'Lucy in the Sky with Diamonds' and 'A Day in the Life' showcase The Beatles at their most experimental.",
+      "songs": [
+        
+            { "title": "Sgt. Pepper's Lonely Hearts Club Band", "duration": "2:02" },
+            { "title": "With a Little Help from My Friends", "duration": "2:44" },
+            { "title": "Lucy in the Sky with Diamonds", "duration": "3:28" },
+            { "title": "A Day in the Life", "duration": "5:33" },
+            { "title": "Getting Better", "duration": "2:47" },
+            { "title": "Fixing a Hole", "duration": "2:36" },
+            { "title": "She's Leaving Home", "duration": "3:34" },
+            { "title": "Being for the Benefit of Mr. Kite!", "duration": "2:37" },
+            { "title": "Within You Without You", "duration": "5:05" },
+            { "title": "When I'm Sixty-Four", "duration": "2:37" },
+            { "title": "Lovely Rita", "duration": "2:41" },
+            { "title": "Good Morning Good Morning", "duration": "2:41" },
+            { "title": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)", "duration": "1:18" },
+            { "title": "A Day in the Life", "duration": "5:33" }
+        
+        
+      ],
+      "image": "Assets/SgtPepper-1 album cover.jpg",
+      "songPreview": "Assets/music/When I'm Sixty Four (Remastered 2009).mp3"
+    },
+    {
+      "id": 9,
+      "title": "MAGICAL MYSTERY TOUR",
+      "year": 1967,
+      "description": "Originally released as an EP, Magical Mystery Tour features some of The Beatles' most imaginative music, including 'Strawberry Fields Forever' and 'Penny Lane.' The album reflects the band's growing use of surreal lyrics and innovative studio techniques.",
+      "songs": [
+        
+            { "title": "Magical Mystery Tour", "duration": "2:47" },
+            { "title": "The Fool on the Hill", "duration": "3:00" },
+            { "title": "I Am the Walrus", "duration": "4:35" },
+            { "title": "Love Me Do", "duration": "2:28" },
+            { "title": "Penny Lane", "duration": "3:00" },
+            { "title": "Strawberry Fields Forever", "duration": "4:05" },
+            { "title": "All You Need Is Love", "duration": "3:57" },
+            { "title": "Baby You're a Rich Man", "duration": "3:05" },
+            { "title": "Hello Goodbye", "duration": "3:29" }
+        
+        
+      ],
+      "image": "Assets/MagicalMysteryTourDoubleEPcover.jpg",
+      "songPreview": "Assets/music/Penny Lane (Remastered 2015).mp3"
+    },
+    {
+      "id": 10,
+      "title": "BEATLES (WHITE ALBUM)",
+      "year": 1968,
+      "description": "The Beatles (commonly referred to as the 'White Album') is a double album that spans a wide variety of musical styles, from folk to rock to avant-garde. Songs like 'While My Guitar Gently Weeps' and 'Blackbird' showcase the band's diversity and innovation.",
+      "songs": [
+        
+            { "title": "Back in the U.S.S.R.", "duration": "2:43" },
+            { "title": "Dear Prudence", "duration": "3:56" },
+            { "title": "Glass Onion", "duration": "2:17" },
+            { "title": "Ob-La-Di, Ob-La-Da", "duration": "3:08" },
+            { "title": "Wild Honey Pie", "duration": "1:08" },
+            { "title": "The Continuing Story of Bungalow Bill", "duration": "2:17" },
+            { "title": "While My Guitar Gently Weeps", "duration": "4:45" },
+            { "title": "Happiness Is a Warm Gun", "duration": "2:43" },
+            { "title": "Martha My Dear", "duration": "2:29" },
+            { "title": "I'm So Tired", "duration": "2:03" },
+            { "title": "Blackbird", "duration": "2:18" },
+            { "title": "Piggies", "duration": "2:03" },
+            { "title": "Rocky Raccoon", "duration": "3:31" },
+            { "title": "Don't Pass Me By", "duration": "3:47" },
+            { "title": "Why Don't We Do It in the Road?", "duration": "1:41" },
+            { "title": "I Will", "duration": "1:46" },
+            { "title": "Julia", "duration": "2:54" },
+            { "title": "Birthday", "duration": "2:43" },
+            { "title": "Yer Blues", "duration": "4:00" },
+            { "title": "Mother Nature's Son", "duration": "2:47" },
+            { "title": "Everybody's Got Something to Hide Except Me and My Monkey", "duration": "2:24" },
+            { "title": "Sexy Sadie", "duration": "2:28" },
+            { "title": "Helter Skelter", "duration": "4:30" },
+            { "title": "Long, Long, Long", "duration": "3:06" },
+            { "title": "Revolution 1", "duration": "4:14" },
+            { "title": "Honey Pie", "duration": "2:41" },
+            { "title": "Savoy Truffle", "duration": "2:55" },
+            { "title": "Cry Baby Cry", "duration": "3:00" },
+            { "title": "Revolution 9", "duration": "8:22" },
+            { "title": "Good Night", "duration": "3:14" }
+        
+        
+      ],
+      "image": "Assets/white album cover.jpg",
+      "songPreview": "Assets/music/Helter Skelter (Remastered 2009).mp3"
+    },
+    {
+      "id": 11,
+      "title": "YELLOW SUBMARINE",
+      "year": 1969,
+      "description": "Yellow Submarine is both a soundtrack and a psychedelic adventure. The album includes both new songs like 'Hey Bulldog' and older tracks from the band's catalog, making it a unique part of their discography.",
+      "songs": [
+        
+            { "title": "Yellow Submarine", "duration": "2:40" },
+            { "title": "Hey Bulldog", "duration": "3:07" },
+            { "title": "All Together Now", "duration": "2:11" },
+            { "title": "Only a Northern Song", "duration": "3:25" },
+            { "title": "All You Need Is Love", "duration": "3:57" },
+            { "title": "Baby, You're a Rich Man", "duration": "2:58" },
+            { "title": "Melancholy Hill", "duration": "2:56" },
+            { "title": "It’s All Too Much", "duration": "3:29" }
+        
+        
+      ],
+      "image": "Assets/YellowSubmarinealbumcover.jpg",
+      "songPreview": "Assets/music/All You Need Is Love (Remastered 2009).mp3"
+    },
+    {
+      "id": 12,
+      "title": "ABBEY ROAD",
+      "year": 1969,
+      "description": "Abbey Road is often considered one of the band's finest works. With tracks like 'Come Together' and 'Here Comes the Sun,' the album represents the culmination of The Beatles' musical evolution, featuring iconic melodies and the famous medley on Side B.",
+      "songs": [
+        
+            { "title": "Come Together", "duration": "4:20" },
+            { "title": "Something", "duration": "3:02" },
+            { "title": "Maxwell's Silver Hammer", "duration": "3:27" },
+            { "title": "Oh! Darling", "duration": "3:26" },
+            { "title": "Octopus's Garden", "duration": "2:51" },
+            { "title": "I Want You (She’s So Heavy)", "duration": "7:47" },
+            { "title": "Here Comes the Sun", "duration": "3:05" },
+            { "title": "Because", "duration": "2:45" },
+            { "title": "You Never Give Me Your Money", "duration": "4:01" },
+            { "title": "Sun King", "duration": "2:26" },
+            { "title": "Mean Mr. Mustard", "duration": "1:06" },
+            { "title": "Polythene Pam", "duration": "1:12" },
+            { "title": "She Came In Through the Bathroom Window", "duration": "1:58" },
+            { "title": "Golden Slumbers", "duration": "1:31" },
+            { "title": "Carry That Weight", "duration": "1:36" },
+            { "title": "The End", "duration": "2:20" },
+            { "title": "Her Majesty", "duration": "0:23" }
+        
+        
+      ],
+      "image": "Assets/Abbey_Road album cover.jpg",
+      "songPreview": "Assets/music/The Beatles - Here Comes The Sun (2019 Mix).mp3"
+    },
+    {
+      "id": 13,
+      "title": "LET IT BE",
+      "year": 1970,
+      "description": "The final studio album, Let It Be captures The Beatles at a time of internal conflict. The album includes some of their most beloved songs, including the title track and 'Get Back,' closing their career on an emotional and powerful note.",
+      "songs": [
+        
+            { "title": "Two of Us", "duration": "3:27" },
+            { "title": "Dig a Pony", "duration": "3:34" },
+            { "title": "Across the Universe", "duration": "3:48" },
+            { "title": "I Me Mine", "duration": "2:25" },
+            { "title": "Dig It", "duration": "0:51" },
+            { "title": "Let It Be", "duration": "4:03" },
+            { "title": "Maggie Mae", "duration": "0:40" },
+            { "title": "I've Got a Feeling", "duration": "3:38" },
+            { "title": "One After 909", "duration": "2:54" },
+            { "title": "The Long and Winding Road", "duration": "3:38" },
+            { "title": "For You Blue", "duration": "2:31" },
+            { "title": "Get Back", "duration": "3:10" }
+              
+      ],
+      "image": "Assets/let it be album cover.jpg",
+      "songPreview": "Assets/music/The Long And Winding Road (Remastered 2009).mp3"
+    }
+  ]
+
+  
+  

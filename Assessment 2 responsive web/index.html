@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatles Discography</title>
+    <!--link to CSS file-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header styles-->
+    <header class="banner" id="banner">
+        <!--Div for the bg image of the whole header-->
+        <div class="bg">
+            <img src="Assets/The Beatles.jpg" alt=""><!-- BG link-->
+        </div>
+        <!--This is the logo that will be overlaying the bg-->
+        <div class="center-content">
+            <img src="Assets/beatles white.png" alt="The Beatles Logo"><!--Logo link-->
+        </div>
+        </div>
+    </header>
+    <!--This section is for the main content--> 
+    <main>
+        <!--Section for the introductory description of the website-->
+        <section class="intro">
+            <p>"Welcome to The Beatles Discography – a tribute to the greatest band in history. Journey through their legendary albums, timeless hits, and groundbreaking artistry. Celebrate the music that changed the world, from the early days of Beatlemania to their final masterpieces. Let the magic of The Beatles inspire you again!"</p>
+        </section>
+        <!--Same as the intro class but for mobile styling-->
+        <div class="intro-mobile">
+            <p>DISCOGRAPHY</p>
+            <h1>Welcome to The Beatles Discography – a tribute to the greatest band in history. Journey through their legendary albums, timeless hits, and groundbreaking artistry. Celebrate the music that changed the world, from the early days of Beatlemania to their final masterpieces. Let the magic of The Beatles inspire you again!"</h1>
+        </div>
+        <!--Section for the band members description-->
+        <section class="cards">
+            <!--Called a div for each member card to layout it-->
+            <div id="card1" class="card">
+                <!--Added a portrait img-->
+                <img src="Assets/paul macca portrait.jpg" alt="">
+                <!--Called div class for overlay description of the member-->
+                <div class="overlay">
+                    <h3>Paul Mccartney</h3>
+                    <p>Paul McCartney is a legendary musician, singer, and songwriter best known for his role as the bassist and one of the primary songwriters of The Beatles. His melodic bass lines, powerful voice, and iconic compositions such as "Hey Jude" and "Yesterday" helped shape the sound of the 1960s and beyond. After The Beatles disbanded, McCartney enjoyed a successful solo career with his band Wings and continues to influence music worldwide.</p>
+                </div>
+            </div>
+            <div id="card2" class="card">
+                <img src="Assets/george harrision portrait.jpg" alt="">
+                <div class="overlay">
+                    <h3>George Harrison</h3>
+                    <p>George Harrison, often called the "Quiet Beatle," was the lead guitarist and one of the key songwriters of The Beatles. His contributions to the band's music, including hits like "Here Comes the Sun" and "Something," highlighted his deep interest in spirituality and Indian culture. After The Beatles, Harrison had a successful solo career and was a passionate advocate for peace and charity.</p>
+                </div>
+            </div>
+            <div id="card3" class="card">
+                <img src="Assets/john lennon portrait.jpg" alt="">
+                <div class="overlay">
+                    <h3>John Lennon</h3>
+                    <p>John Lennon was an influential musician, peace activist, and one of the founding members of The Beatles. Known for his wit, creativity, and thought-provoking lyrics, Lennon was the driving force behind songs like "Imagine" and "Give Peace a Chance." After The Beatles, he embarked on a solo career, using his platform to advocate for peace, love, and social change until his untimely death in 1980.</p>
+                </div>
+            </div>
+            <div id="card4" class="card">
+                <img src="Assets/ringo starr portrait.jpg" alt="">
+                <div class="overlay">
+                    <h3>Ringo Starr</h3>
+                    <p>Ringo Starr, drummer for The Beatles, is known for his steady, innovative style that shaped their iconic sound. He sang hits like "Yellow Submarine" and "With a Little Help from My Friends." After The Beatles, Ringo enjoyed a successful solo career and formed the All-Starr Band, continuing to inspire music fans worldwide.</p>
+                </div>
+            </div>
+        </section>
+        <!--Section for album description and song list-->
+        <section class="albums" id="albums">
+            <!--Called a div class for the title of the container-->
+            <div class="album_title">
+                <p>BEATLE ALBUMS</p>
+                <h1>Explore The Beatles' timeless albums, featuring iconic tracks, groundbreaking artistry, and a legacy that redefined music history for generations.</h1>
+            </div>
+            <!-- The dynamic album items will be inserted here -->
+        </section>
+        <!--Div class for the title of compilation section-->
+        <div class="comp_title">
+            <p>COMPILATIONS</p>
+            <h1>Discover The Beatles' timeless compilations through rare interviews, iconic images, exclusive artifacts, and classic tracks that shaped music history.</h1>
+        </div>
+        <!--Section for the compilation albums of the beatles-->
+        <section class="compilations" id="compilations">
+            <!--Dynamic content will be placed here-->
+        </section>
+        <audio id="audioPlayer"></audio><!--Called audio tag to play music when is hovering-->
+        <!--Section for the new song of the beatles-->
+        <div class="wrapper">
+            <div class="comp_title"><!--Title of the section-->
+                <p>NOW AND THEN</p><!--Title-->
+                <h1>"Now and Then," a heartfelt Beatles track, combines John Lennon's 1970s demo with contributions from McCartney, Harrison, and Starr. Revived using AI, it’s a poignant tribute to love and legacy.</h1>
+            </div>
+            <div class="container"><!--Container div for the album cover and disc animation-->
+                <div class="NAT"><!--Div class for the album cover container-->
+                    <img src="Assets/disk (2).png" alt="" class="disc"><!--#inserted disc png file-->
+                    <audio src="Assets/music/The Beatles - Now And Then (Official Audio).mp3"></audio><!--#Audio tag to insert music-->
+                </div>
+            </div>
+        </div>
+        <!--Title for the Timeline section-->
+        <div class="album_title">
+            <p>HISTORY OF BEATLEMANIA</p>
+        </div>
+        <!--Section for the timeline of the beatles-->
+        <section class="timeline">
+            <h1>The Beatles Timeline</h1>
+            <div class="checkpoint"><!--Checkpoint div is called for all the points that will be inserted-->
+                <div>
+                    <h2>1957</h2><!--Date of year-->
+                    <p>The Quarrymen: John Lennon forms a skiffle band called The Quarrymen in Liverpool.</p>
+                    <p> July 6: Paul McCartney meets John Lennon at a church fete and joins the band.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1958</h2>
+                    <p>George Harrison joins The Quarrymen, completing the core trio of what would later become The Beatles.</p>
+                    
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1960</h2>
+                    <p>The band briefly adopts the name The Silver Beatles before settling on The Beatles.</p>
+                    <p> They travel to Hamburg, Germany, for their first residency, where they refine their stage presence and sound.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1962</h2>
+                    <p>June 6: The Beatles audition for producer George Martin at EMI Studios.</p>
+                    <p>August 18: Ringo Starr replaces Pete Best as drummer, finalizing the classic lineup.</p>
+                    <p>October 5: The Beatles release their first single, "Love Me Do", in the UK.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1963</h2>
+                    <p>March 22: Debut album "Please Please Me" is released. It tops the UK charts.</p>
+                    <p>November: Beatlemania sweeps the UK following their hit singles and relentless touring.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1964</h2>
+                    <p>February 7: The Beatles arrive in the United States to a hero’s welcome.</p>
+                    <p>February 9: They perform on The Ed Sullivan Show, watched by 73 million people.</p>
+                    <p>July 10: The first feature film, "A Hard Day’s Night", premieres.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1965</h2>
+                    <p>August 15: The Beatles play to 55,600 fans at Shea Stadium in New York, setting a new record.</p>
+                    <p>December 3: "Rubber Soul", a more mature and experimental album, is released.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1966</h2>
+                    <p>June 20: The band records "Tomorrow Never Knows", showcasing their leap into psychedelia.</p>
+                    <p>August 29: The Beatles play their last official live concert in San Francisco.</p>
+                    <p>December 5: They release "Revolver", marking their transition to studio innovation.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1967</h2>
+                    <p>June 1: The landmark album "Sgt. Pepper’s Lonely Hearts Club Band" is released, redefining popular music.</p>
+                    <p>August 27: Manager Brian Epstein dies, creating uncertainty within the band.</p>
+                    <p>December 26: The film "Magical Mystery Tour" airs on BBC but receives mixed reviews.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1968</h2>
+                    <p>July 17: The animated film "Yellow Submarine" premieres.</p>
+                    <p>November 22: The double album "The Beatles" (The White Album) is released.</p>
+                    <p>The group establishes Apple Corps, their own multimedia company.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1969</h2>
+                    <p>January 30: The famous rooftop concert at Apple Corps headquarters becomes their last public performance.</p>
+                    <p>September 26: "Abbey Road" is released, featuring iconic tracks like "Come Together" and "Here Comes the Sun."</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>1970</h2>
+                    <p>April 10: Paul McCartney announces he is leaving The Beatles.</p>
+                    <p>May 8: The final studio album, "Let It Be", is released alongside the documentary of the same name.</p>
+                    <p>The Beatles officially disband.</p>
+                </div>
+            </div>
+            <div class="checkpoint">
+                <div>
+                    <h2>Post-Breakup Highlights:</h2>
+                    <p>Each member embarks on successful solo careers.</p>
+                    <p>The band's legacy grows, with countless re-releases, tributes, and awards.</p>
+                    <p>The Beatles are inducted into the Rock and Roll Hall of Fame in 1988.</p>
+                </div>
+            </div>
+        </section>
+        <!--This is the footer section-->
+        <footer>
+            <!--Div for the main footer content-->
+            <div class="footer-content">
+                <div class="footerlogo"><!--Add the logo-->
+                    <img src="Assets/beatles white.png" alt="">
+                </div>
+                <!--Created 4 divs for a grid-->
+                <div class="footer-links"><!--footer content links-->
+                    <ul><!--Put them on a list-->
+                        <li><a href="#banner" class="scroll-link3">HOME</a></li>
+                        <li><a href="#albums" class="scroll-link">ALBUMS</a></li>
+                        <li><a href="#compilations" class="scroll-link2">COMPILATIONS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-brands"><!--Footer content brands-->
+                    <ul>
+                        <li><a href="#">BEATLES</a></li>
+                        <li><a href="#">STUDIO</a></li>
+                        <li><a href="#">OFFICE</a></li>
+                    </ul>
+                </div>
+                <div class="social-icons"><!--footer content socail links-->
+                    <ul>
+                        <li><a href="https://www.facebook.com/dope1512/">FACEBOOK</a></li>
+                        <li><a href="https://www.instagram.com/tuneechiiii/">INSTAGRAM</a></li>
+                        <li><a href="#">GITHUB</a></li>
+                    </ul>
+                </div>
+                <div class="created"><!--my name-->
+                    <ul>
+                        <li><a href="#">SITE BY</a></li>
+                        <li><a href="#">NATHAN BARTOLO</a></li>
+                        <li><a href="#">CC LEVEL 5</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Class for copyright-info conten below-->
+            <div class="footer-bottom">
+                <div class="back-to-top">
+                </div>
+                <div class="copyright-info"><!--copyright div-->
+                    &copy; 2025 BEATLES. All RIGHTS RESERVED.
+                </div>
+            </div>
+        </footer>     
+    </main>
+    <script src="script.js"></script> <!--Link to the JS file-->
+</body>
+</html>

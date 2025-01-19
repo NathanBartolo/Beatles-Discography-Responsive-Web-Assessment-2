@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatles PNG Signatures Typewriting</title>
+    <style>
+        .signature-container {
+            position: relative;
+            width: 400px; /* Adjust width to fit your images */
+            margin: 20px auto;
+            overflow: hidden; /* Hide parts of the image initially */
+        }
+
+        .signature {
+            width: 100%; /* Ensure the PNG scales properly */
+            position: relative;
+            clip-path: inset(0 100% 0 0); /* Hide the entire signature initially */
+            animation: typewrite 3s ease-in-out forwards;
+        }
+
+        /* Stagger animations for each signature */
+        #paul { animation-delay: 0s; }
+        #john { animation-delay: 1s; }
+        #george { animation-delay: 2s; }
+        #ringo { animation-delay: 3s; }
+
+        /* Animation to reveal the signature */
+        @keyframes typewrite {
+            to {
+                clip-path: inset(0 0 0 0); /* Reveal the entire signature */
+            }
+        }
+
+        .wrapper{
+            min-height: 100vh;
+            background-color: #eee;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        .container{
+            width: 100%;
+            max-width: 250px;
+            perspective: 900px;
+            margin: auto;
+        }
+
+        .NAT {
+            transition: 0.5s all ease;
+            transform: rotateX('50deg') scale(0.8);
+        
+        }
+        .NAT::after{
+            content: '';
+            display: block;
+            background-color: black;
+            background-image: url("Assets/1962 album cover.jpg");
+
+            background-size: contain;
+            padding-bottom: 100%;
+        }
+
+        .NAT:hover{
+            transform: rotate(0deg) scale(1) translateY(10px);
+            transition: 0.7 all ease;
+        }
+
+        .disc {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            transition: 0.5s ease-in-out;
+            -webkit-animation: spin 4s linear infinite;
+            -moz-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+
+        }
+
+        .NAT:hover .disc{
+            transition:  0.7s ease-in-out 0.3s;
+            left: 55%;
+        }
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes spin{
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        @keyframes spin{
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Beatles Signatures</h1>
+
+    <!-- Signature 1: Paul -->
+    <div class="signature-container">
+        <img id="paul" class="signature" src="Assets/Paul_McCartney_signature.svg.png" alt="Paul's Signature">
+    </div>
+
+    <!-- Signature 2: John -->
+    <div class="signature-container">
+        <img id="john" class="signature" src="Assets/Firma_de_John_Lennon.svg.png" alt="John's Signature">
+    </div>
+
+    <!-- Signature 3: George -->
+    <div class="signature-container">
+        <img id="george" class="signature" src="Assets/George_Harrison_signature.svg.png" alt="George's Signature">
+    </div>
+
+    <!-- Signature 4: Ringo -->
+    <div class="signature-container">
+        <img id="ringo" class="signature" src="Assets/Ringo_Starr_signature.svg.png" alt="Ringo's Signature">
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="NAT">
+                <img src="Assets/disk.png" alt="" class="disc">
+                <audio src=""></audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
