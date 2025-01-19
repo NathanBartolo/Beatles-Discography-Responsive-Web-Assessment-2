@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Enable CORS for communication with the frontend
 app.use(cors());
@@ -33,3 +33,4 @@ app.get('/api/compilations', (req, res) => {
 app. listen(port,() =>{
     console.log(`Server running at http://localhost:${port}`);
 })
+
