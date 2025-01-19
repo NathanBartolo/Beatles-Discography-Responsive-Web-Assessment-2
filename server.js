@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express');//called express js
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS for communication with the frontend
 app.use(cors());
-
+//called the files for the web
 app.use(express.static('Assessment 2 responsive web'));
 
 // Serve album data
