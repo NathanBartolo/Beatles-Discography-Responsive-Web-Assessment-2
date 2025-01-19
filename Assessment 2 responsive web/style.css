@@ -725,7 +725,7 @@ footer {
     font-size: 12px;
   }
 }
-@media (min-width: 720px) and (max-width: 1023px) {/*Tablet styling*/
+@media (min-width: 541px) and (max-width: 1023px) {/*Tablet styling*/
   .banner {
     height: 70vh; /* Reduced height to make it more appropriate for tablet screens */
   }
